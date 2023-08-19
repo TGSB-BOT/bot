@@ -1,3 +1,6 @@
+import { Main, MainFromJS } from './bot/telegram';
+
+
 const config = require("./config");
 const TelegramBot = require("node-telegram-bot-api");
 
@@ -9,4 +12,5 @@ const main_debug = config.main_debug;
 
 const TgBot = new TelegramBot(bot_token, { polling: true });
 
-TgBot.onText(...)
+
+export { Main };

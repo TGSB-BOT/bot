@@ -1,4 +1,5 @@
 import { IFunction } from './IFunction';
+import { Main as MainFromJS } from '../../Main';
 
 /**
  * 
@@ -15,4 +16,4 @@ class Main {
     }
 }
 
-export default Main;
+export { Main, MainFromJS };

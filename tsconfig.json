@@ -8,10 +8,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": ["*", "./bot/*"]
-    }
+    "rootDir": "./",
+    "outDir": "./dist"
   },
   "include": [
     "./bot/**/*"

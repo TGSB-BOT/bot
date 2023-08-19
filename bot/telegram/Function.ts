@@ -1,4 +1,4 @@
-import { IFunction as IFunction } from './IFunction';
+import { IFunction } from './IFunction';
 import TelegramBot from "node-telegram-bot-api";
 import { bot_token } from "../../config.json";
 

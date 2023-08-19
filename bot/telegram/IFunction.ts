@@ -8,5 +8,15 @@
 
 export interface IFunction {
 
+    /**
+     * Start of the Telegram Bot via IFunction
+     */
     startTelegram(): void;
+
+    /**
+     * SendMessage Function which sends a initial message
+     */
+    sendMessage(chatid, message, options);
+
+
 }

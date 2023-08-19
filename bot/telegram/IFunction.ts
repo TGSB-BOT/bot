@@ -8,5 +8,5 @@
 
 export interface IFunction {
 
-    basicFunction(): void;
+    startTelegram(): void;
 }

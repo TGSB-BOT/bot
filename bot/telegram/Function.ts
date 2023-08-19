@@ -11,7 +11,6 @@ import { bot_token } from "../../config.json";
 
 const TgBot = new TelegramBot(bot_token, { polling: true });
 
-
 class Function implements IFunction {
 
     /**
@@ -20,18 +19,19 @@ class Function implements IFunction {
     startTelegram() {
         TgBot.onText(/\start/, (msg) => {
             let chatid = msg.chat.id.toString();
-        this.sendMessage(
-            chatid,
-            "User "+chatid+ " sent a message to the bot."
-        );
-    })};
+            this.sendMessage(
+                chatid,
+                "User " + chatid + " sent a message to the bot."
+            );
+        });
+    }
 
     /**
      * Sends a message to the telegram bot of user with userID and default formatting
      * @param chatid the telegram id of the user
      * @param message the message
      */
-    sendMessage(chatid: string, message: string){
+    sendMessage(chatid: string, message: string) {
         TgBot.sendMessage(chatid, message, {
             parse_mode: "HTML",
             disable_web_page_preview: true,

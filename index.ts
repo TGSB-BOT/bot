@@ -1,11 +1,12 @@
 import { Main } from './bot/telegram/Main';
+import { IFunction } from './bot/telegram/IFunction';
+
+
 
 const functionImplementation: IFunction = {
     startTelegram: () => {
-        // Implementierung der startTelegram-Funktion
     },
     sendMessage: (chatid: string, message: string, options: { parse_mode: string; disable_web_page_overview: string; reply_markup: { remove_keyboard: boolean; }; }) => {
-        // Implementierung der sendMessage-Funktion
     }
 };
 

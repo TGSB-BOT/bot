@@ -8,3 +8,5 @@ const main_channel = config.main_channel;
 const main_debug = config.main_debug;
 
 const TgBot = new TelegramBot(bot_token, { polling: true });
+
+TgBot.onText(...)

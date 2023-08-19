@@ -10,14 +10,6 @@ import { bot_token } from "../../config.json";
  */
 
 const TgBot = new TelegramBot(bot_token, { polling: true });
-const parseMode = {
-    parse_mode: "HTML",
-
-    disable_web_page_overview: "True",
-    reply_markup: {
-        remove_keyboard: true,
-    },
-};
 
 
 class Function implements IFunction {
@@ -30,7 +22,7 @@ class Function implements IFunction {
             let chatid = msg.chat.id.toString();
         this.sendMessage(
             chatid,
-            "User "+chatid+ " sent a message to the bot.", parseMode
+            "User "+chatid+ " sent a message to the bot."
         );
     })};
 
@@ -38,10 +30,15 @@ class Function implements IFunction {
      * Sends a message to the telegram bot of user with userID and default formatting
      * @param chatid the telegram id of the user
      * @param message the message
-     * @param options the formatting options of the message
      */
-    sendMessage(chatid: string, message: string, options = {}){
-        TgBot.sendMessage(chatid, message, options);
+    sendMessage(chatid: string, message: string){
+        TgBot.sendMessage(chatid, message, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true,
+            reply_markup: {
+                remove_keyboard: true,
+            },
+        });
     }
 
 }

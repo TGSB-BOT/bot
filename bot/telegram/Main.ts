@@ -11,8 +11,6 @@ const main_debug = config.main_debug;
 
 const TgBot = new TelegramBot(bot_token, { polling: true });
 
-const functionInstance = {} as IFunction;
-
 /**
  * 
  * @author ozzy_trades
@@ -21,7 +19,12 @@ const functionInstance = {} as IFunction;
  */
 
 class Main {
-    
+    functionInstance: IFunction;
+
+    startBot() {
+        this.functionInstance.startTelegram();
+
+    }
 
 }
 

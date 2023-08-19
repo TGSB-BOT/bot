@@ -11,4 +11,4 @@ const functionImplementation: IFunction = {
 };
 
 const mainInstance = new Main(functionImplementation);
-mainInstance.startTelegram();
+mainInstance.sendMessage("500430509", "test");

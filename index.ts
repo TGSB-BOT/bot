@@ -1,12 +1,13 @@
 import { Main } from './bot/telegram/Main';
-import { IFunction } from './bot/telegram/IFunction';
 
-public MyFunc(obj : IStackOverFlow)
-{
-    // do stuff
-}
+const functionImplementation: IFunction = {
+    startTelegram: () => {
+        // Implementierung der startTelegram-Funktion
+    },
+    sendMessage: (chatid: string, message: string, options: { parse_mode: string; disable_web_page_overview: string; reply_markup: { remove_keyboard: boolean; }; }) => {
+        // Implementierung der sendMessage-Funktion
+    }
+};
 
-var obj = {prop1: 'str', prop2: 3};
-MyFunc(obj); // ok
-
-export { Main };
+const mainInstance = new Main(functionImplementation);
+mainInstance.startTelegram();

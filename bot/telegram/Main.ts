@@ -18,18 +18,17 @@ const TgBot = new TelegramBot(bot_token, { polling: true });
  * 
  */
 
+
 class Main {
-    functionInstance!: IFunction;
+    functionInstance: IFunction;
 
     constructor(obj: IFunction) {
         this.functionInstance = obj;
     }
 
-    startBot() {
+    startTelegram() {
         this.functionInstance.startTelegram();
-
     }
-
 }
 
 export { Main };

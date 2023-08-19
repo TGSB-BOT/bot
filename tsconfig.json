@@ -2,13 +2,21 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "./bot/*"]
+    }
   },
   "include": [
     "./bot/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

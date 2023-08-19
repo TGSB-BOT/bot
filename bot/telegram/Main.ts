@@ -21,7 +21,6 @@ const TgBot = new TelegramBot(bot_token, { polling: true });
 class Main {
     functionInstance!: IFunction;
 
-
     startBot() {
         this.functionInstance.startTelegram();
 

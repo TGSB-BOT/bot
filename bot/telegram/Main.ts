@@ -7,16 +7,12 @@ import { IFunction } from './IFunction';
  * 
  */
 
-
-class Main implements IFunction {
+class Main {
     functionInstance: IFunction;
-    
 
     useFunction() {
         this.functionInstance.basicFunction();
     }
-
-    }
-
+}
 
 export default Main;

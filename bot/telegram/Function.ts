@@ -31,6 +31,12 @@ class Function implements IFunction {
         );
     })};
 
+    /**
+     * Sends a message to the telegram bot of user with userID and default formatting
+     * @param chatid the telegram id of the user
+     * @param message the message
+     * @param options the formatting options of the message
+     */
     sendMessage(chatid, message, options = {}){
         TgBot.sendMessage(chatid, message, options);
     }

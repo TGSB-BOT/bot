@@ -1,6 +1,6 @@
 import { IFunction as IFunction } from './IFunction';
 import TelegramBot from "node-telegram-bot-api";
-import config, { bot_token } from "../../config.js";
+import { bot_token } from "../../config.json";
 
 /**
  * 
@@ -22,6 +22,9 @@ const parseMode = {
 
 class Function implements IFunction {
 
+    /**
+     * initial function to start the telegram bot when a user hits the START button in the bot
+     */
     startTelegram() {
         TgBot.onText(/\start/, (msg) => {
             let chatid = msg.chat.id.toString();
@@ -37,7 +40,7 @@ class Function implements IFunction {
      * @param message the message
      * @param options the formatting options of the message
      */
-    sendMessage(chatid, message, options = {}){
+    sendMessage(chatid: string, message: string, options = {}){
         TgBot.sendMessage(chatid, message, options);
     }
 

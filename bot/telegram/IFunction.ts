@@ -16,7 +16,6 @@ export interface IFunction {
     /**
      * SendMessage Function which sends a initial message
      */
-    sendMessage(chatid, message, options);
-
-
+    sendMessage(chatid: string, message: string, options: { parse_mode: string; disable_web_page_overview: string; reply_markup: { remove_keyboard: boolean; }; }): void;
+    
 }

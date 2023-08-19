@@ -1,7 +1,6 @@
 import { IFunction } from './IFunction';
-import { Main as MainFromJS } from '../../Main';
 
-import config from "../../config.js";
+import config from "../../config.json";
 import TelegramBot from "node-telegram-bot-api";
 
 const bot_token = config.bot_token;
@@ -12,6 +11,8 @@ const main_debug = config.main_debug;
 
 const TgBot = new TelegramBot(bot_token, { polling: true });
 
+const functionInstance = {} as IFunction;
+
 /**
  * 
  * @author ozzy_trades
@@ -20,9 +21,8 @@ const TgBot = new TelegramBot(bot_token, { polling: true });
  */
 
 class Main {
-    functionInstance: IFunction;
+    
 
-  
 }
 
-export { Main, MainFromJS };
+export { Main };

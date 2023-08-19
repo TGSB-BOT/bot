@@ -1,10 +1,4 @@
-import { Main } from '../bot/telegram/Main';
-
-
-const mainInstance = new Main();
-
-mainInstance.useFunction();
-
+import { Main } from './bot/telegram/Main';
 
 
 export { Main };

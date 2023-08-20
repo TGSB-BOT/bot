@@ -36,7 +36,7 @@ class Function {
      * @param chatid the telegram id of the user
      * @param message the message
      */
-    sendMessage(chatid: string, message: string) {
+    sendMessage(chatid, message) {
         TgBot.sendMessage(chatid, message, {
             parse_mode: "HTML",
             disable_web_page_preview: true,

@@ -17,7 +17,7 @@ class Main {
         funcClass.startTelegram();
     }
 
-    sendMessage(chatid: string, message: string) {
+    sendMessage(chatid, message) {
         funcClass.sendMessage(chatid, message);
     }
 }

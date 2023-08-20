@@ -1,17 +1,23 @@
 import { IFunction } from './IFunction';
 import TelegramBot from "node-telegram-bot-api";
-import { bot_token } from "../../config.json";
+
+import config from "../../config.json";
+const bot_token = config.bot_token;
+const debug_channel = config.debug_channel;
+const debug_group = config.debug_group;
+const main_channel = config.main_channel;
+const main_debug = config.main_debug;
 
 /**
  * 
- * @author ozzy_trades, sportsr0bber
+ * @author ozzy_trades, r0bster97
  * Backend Logic for the Telegram Bot which implements the IFunction 
  * 
  */
 
 const TgBot = new TelegramBot(bot_token, { polling: true });
 
-class Function implements IFunction {
+class Function {
 
     /**
      * initial function to start the telegram bot when a user hits the START button in the bot
@@ -42,3 +48,6 @@ class Function implements IFunction {
     }
 
 }
+
+
+export { Function };

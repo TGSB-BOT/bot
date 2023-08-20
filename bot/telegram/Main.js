@@ -1,26 +1,18 @@
+// bot/telegram/Main.js
 
-import { Function } from './Function';
-
-const funcClass = new Function();
+const TelegramBot = require('node-telegram-bot-api');
+const { onTextFunction } = require('./Function');
 
 /**
- * 
- * @author ozzy_trades, r0bster97
- * / Main class for the bot integration 
- * 
+ * @author r0bster97
+ * Class that creates the telegram bot api object and uses the functions defined in ./Function
  */
 
-
-class Main {
-
-    startTelegram() {
-        funcClass.startTelegram();
-    }
-
-    sendMessage(chatid, message) {
-        funcClass.sendMessage(chatid, message);
+class TelegramMain {
+    constructor(token) {
+        this.bot = new TelegramBot(token, {polling: true});
+        onTextFunction(this.bot);
     }
 }
 
-
-export { Main };
+module.exports = TelegramMain;

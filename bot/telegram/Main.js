@@ -1,7 +1,5 @@
-// bot/telegram/Main.js
-
 const TelegramBot = require('node-telegram-bot-api');
-const { onTextFunction } = require('./Function');
+const { onTextFunction, onButtonClick } = require('./Function');
 
 /**
  * @author r0bster97
@@ -12,6 +10,7 @@ class TelegramMain {
     constructor(token) {
         this.bot = new TelegramBot(token, {polling: true});
         onTextFunction(this.bot);
+        onButtonClick(this.bot);
     }
 }
 

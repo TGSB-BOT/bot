@@ -1,0 +1,7 @@
+{
+    "greeting": "Hello {username}!\n\nTo make the most of this bot, please click on the buttons below this message.",
+    "buttonClicked": "You clicked a button",
+    "buttonText": "Click me!",
+    "debugMessage": "{username} clicked start",
+    "debugGroupMessage": "{username} entered the game.\nTotal registered users: `{totalUsers}`."
+}
